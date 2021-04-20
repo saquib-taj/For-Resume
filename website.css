@@ -1,0 +1,102 @@
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.header {
+			background-color: rgb(56, 91, 163);
+			padding: 240px;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		.topnav {
+			overflow: hidden;
+			background-color: black;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: rgb(231, 229, 255);
+			text-decoration: none;
+			text-align: center;
+			padding: 15px 20px;
+			width: 20%;
+			font-size: 20px;
+		}
+
+		.topnav a:hover {
+			background-color: gray;
+			color: white;
+		}
+
+		.active {
+			background-color: red;
+		}
+
+		.row::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.myclass {
+			font-size: 45px;
+			padding-top: 30px;
+			text-align: center;
+			color: green;
+		}
+
+		.col {
+			float: left;
+			width: 33.33%;
+			padding: 20px;
+		}
+
+		.img {
+			height: 100px;
+			width: 180px;
+			margin-left: 110px;
+		}
+
+		.imgdiv {
+			background-image: url('Image/img2.jpg');
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover; 
+			height: 400px;
+			width: 100%; 
+			z-index: -1;
+		}
+
+		.button {
+			background-color: rgb(64, 158, 111);
+			color: white;
+			margin-left: 630px;
+			font-size: 15px;
+			padding: 5px;
+		}
+
+		.col_2 {
+			float: left;
+			width: 40%;
+			margin-left: 30px;
+		}
+
+		.col_3 {
+			float: left;
+			width: 30%;
+			margin-left: 30px;
+			padding: 20px;
+		}
+
+		.footer {
+			background-color: black;
+			color: white;
+			width: 100%;
+			font-size: 20px;
+		}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Forms</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		input[type=text], select, textarea {
+			float: left;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 12px;
+			width: 100%;
+			resize: vertical;
+		}
+
+		label {
+			display: inline-block;
+			padding: 12px 12px 12px 0;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			float: right;
+			cursor: pointer;
+			border: none;
+			border-radius: 4px;
+			margin-top: 5px;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.col-25 {
+			float: left;
+			width: 25%;
+			margin-top: 6px;
+		}
+
+		.col-75 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+
+		.container {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 4px; 
+		}
+
+		@media screen and (max-width: 800px) {
+			.col-25, .col-75, input[type=submit] {
+				width: 100%;
+				margin-top: 4px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<form method="post">
+			<div class="row">
+				<div class="col-25">
+					<label for="fname">First Name</label>
+				</div>	
+				<div class="col-75">	
+					<input type="text" name="first_name" id="fname" placeholder="First Name" required="required">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="lname">Last Name</label>
+				</div>
+				<div class="col-75">	
+					<input type="text" name="last_name" id="lname" placeholder="Last Name" required="required">
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="country">Country</label>
+				</div>
+				<div class="col-75">	
+					<select required="required">
+						<option value="India">India</option>
+						<option value="USA">USA</option>
+						<option value="Australia">Australia</option>
+						<option value="Canada">Canada</option>
+					</select>
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="subject">Subject</label>
+				</div>
+				<div class="col-75">	
+					<textarea id="subject" placeholder="Some texts.."></textarea>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div>
+					<input type="submit" value="Submit">
+				</div>
+			</div>	
+		</form>
+	</div>			
+
+</body>
+</html>

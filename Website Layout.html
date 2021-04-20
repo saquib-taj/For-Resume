@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Website Layout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initil-scale=1.0">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #f1f1f1;
+			margin: 0;
+		}
+
+		.header {
+			background-color: lightgrey;
+			padding: 25px;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		.topnav {
+			background-color: black;
+			overflow: hidden;
+		}
+
+		.topnav a {
+			padding: 15px 14px;
+			text-align: center;
+			float: left;
+			color: white;
+			text-decoration: none;
+			width: 14%;
+			display: block;
+		}
+
+		.topnav a:hover {
+			background-color: gray;
+		}
+
+		.active {
+			background-color: red;
+			color: white;
+		}{}
+
+		.col-75 {
+			float: left;
+			padding: 15px;
+			width: 72%;
+		}
+
+		.col-25 {
+			float: left;
+			width: 22%;
+			padding-left: 10px;
+			margin-left: 20px;
+		}
+
+		.row::after {
+			content: "";
+			display: table;
+			clear: both;
+		} 
+
+		.myclass {
+			text-align: justify;
+			border-bottom: 3px solid lightgray;
+			padding-bottom: 20px;
+		}
+
+		.footer {
+			background-color: lightgrey;
+			padding: 25px;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		@media screen and (max-width: 800px) {
+			.col-25, .col-75 {
+				width: 100%;
+				padding: 0;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.topnav a {
+				width: 100%;
+				float: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<h1>My Website</h1>
+		<p>Designed with the use of Media Queries</p>
+	</div>
+
+	<div class="topnav">
+		<a href="#" class="active">Home</a>
+		<a href="#">News</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+		<a href="#">Links</a>
+		<a href="#">Services</a>
+	</div>
+
+	<div class="row">
+		<div class="col-75">
+			<div>
+				<h1 style="text-align: center;">Title Heading</h1>
+				<h4 style="text-align: center;">Title Description: 3rd April 2020</h4>
+				<img src="Image/img1.jpg" alt="img1" width="100%" height="auto">
+				<p>Some text here..</p>
+				<p class="myclass"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div>
+				<h1 style="text-align: center;">Title Heading</h1>
+				<h4 style="text-align: center;">Title Description: 4th April 2020</h4>
+				<img src="Image/img2.jpg" alt="img2" width="100%" height="auto">
+				<p>Some text here..</p>
+				<p class="myclass"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<div class="col-25">
+			<div>
+				<h1>About Me</h1>
+				<img src="Image/img3.jpg" alt="img3" width="100%" height="auto">
+				<p class="myclass">Some text about me in consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+		   </div>
+		    
+			<div style="padding-top: 10px;">
+				<h1>Popular Posts</h1>
+				<img src="Photos/1.jpg" alt="1" width="100%" height="auto">
+				<p style="text-align: justify;">Some text about me in consectetur adipisicing elit.</p>
+
+				<img src="Photos/2.jpg" alt="2" width="100%" height="auto">
+				<p style="text-align: justify;">Some text about me in consectetur adipisicing elit.</p>
+
+				<img src="Photos/3.jpg" alt="3" width="100%" height="auto">
+				<p style="text-align: justify;">Some text about me in consectetur adipisicing elit.</p>
+
+				<img src="Photos/4.jpg" alt="4" width="100%" height="auto">
+				<p class="myclass">Some text about me in consectetur adipisicing elit.</p>
+			</div>
+
+			<div style="padding-top: 10px;">
+				<h1>Follow Me at:</h1>
+				<p class="myclass" >Some text here also goes on just like lorem ipsum.
+				It goes on and on.It goes on and on.It goes on and on.</p>
+			</div>
+		</div>
+	</div>	
+
+	<div class="footer">
+		<h1>This is a Footer</h1>
+	</div>	
+			
+	
+</body>
+</html>
